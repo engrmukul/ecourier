@@ -129,14 +129,14 @@ use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 
 
 //installer
-Route::middleware(['XSS', 'IsNotInstalled'])->group(function () {
-    Route::get('install',                          [InstallerController::class, 'index']);
-});
+// Route::middleware(['XSS', 'IsNotInstalled'])->group(function () {
+//     Route::get('install',                          [InstallerController::class, 'index']);
+// });
 
-Route::middleware(['XSS'])->group(function () {
-    Route::post('installing',                      [InstallerController::class, 'installing'])->name('installing');
-    Route::get('finish',                           [InstallerController::class, 'finish'])->name('final');
-});
+// Route::middleware(['XSS'])->group(function () {
+//     Route::post('installing',                      [InstallerController::class, 'installing'])->name('installing');
+//     Route::get('finish',                           [InstallerController::class, 'finish'])->name('final');
+// });
 
 //end installer
 Route::middleware(['XSS', 'IsInstalled'])->group(function () {
@@ -158,7 +158,10 @@ Route::middleware(['XSS', 'IsInstalled'])->group(function () {
             Auth::routes();
             //frontend
             Route::controller(FrontendController::class)->group(function () {
-                Route::get('/',                      'index')->name('home');
+                //Route::get('/',                      'index')->name('home');
+                Route::get('/', function () {
+                    return redirect()->route('login');
+                })->name('home');
                 Route::get('/tracking',              'tracking')->name('tracking.index');
                 Route::get('/about-us',              'aboutUs')->name('aboutus.index');
                 Route::get('/privacy-and-policy',    'privacyPolicy')->name('privacy.policy.index');
