@@ -84,27 +84,27 @@
                                             <div class="col-sm-6">
                                                 <button type="button"
                                                     class="btn btn-primary btn-lg btn-block mt-2 demo-login-btn"
-                                                    id="demo-admin" data-email="company@wemaxdevs.com"
+                                                    id="demo-admin" data-email="company@ecourier.com"
                                                     data-password="12345678">Admin</button>
                                             </div>
                                             <div class="col-sm-6">
                                                 <button type="button"
                                                     class="btn btn-primary btn-lg btn-block mt-2 demo-login-btn"
-                                                    id="demo-branch" data-email="branch@wemaxdevs.com"
+                                                    id="demo-branch" data-email="branch@ecourier.com"
                                                     data-password="12345678">Branch</button>
                                             </div>
                                             <div class="col-sm-6">
                                                 <button type="button"
                                                     class="btn btn-primary btn-lg btn-block mt-2 demo-login-btn"
                                                     id="demo-merchant" data-merchant="merchant"
-                                                    data-email="merchant@wemaxdevs.com"
+                                                    data-email="merchant@ecourier.com"
                                                     data-password="12345678">Merchant</button>
                                             </div>
                                         @else
                                             <div class="col-sm-6">
                                                 <button type="button"
                                                     class="btn btn-primary btn-lg btn-block mt-2 demo-login-btn"
-                                                    data-email="admin@wemaxdevs.com" data-password="12345678">Admin</button>
+                                                    data-email="admin@ecourier.com" data-password="12345678">Admin</button>
                                             </div>
 
                                             <div class="col-sm-6">
